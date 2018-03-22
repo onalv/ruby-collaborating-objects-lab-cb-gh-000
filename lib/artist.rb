@@ -35,7 +35,7 @@ class Artist
     artist = self.all.include?(artist_name)
     if !artist
       new_artist = self.new(artist_name)
-      
+
     else
       artist
     end
