@@ -7,16 +7,16 @@ class Artist
     @name = name
     @songs = []
   end
-  
+
   def self.all
     @@all
   end
-  
+
   def save
     self.class.all << self
   end
 
-  
+
 
   def add_song(song)
     @songs << song
@@ -33,9 +33,9 @@ class Artist
     @@song_count
   end
 
-  
 
-  
+
+
 
   def self.find_or_create_by_name(artist_name)
     if !self.all.include?(artist_name)
