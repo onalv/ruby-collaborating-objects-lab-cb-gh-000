@@ -23,8 +23,8 @@ class Artist
     @@song_count
   end
 
-  def save
-    @@all << self
+  def save(artist) # String / artirst's name
+    @@all << artist
   end
 
   def self.all
@@ -34,7 +34,8 @@ class Artist
   def self.find_or_create_by_name(artist_name)
     artist = self.all.include?(artist_name)
     if !artist
-      self.new(artist_name)
+      new_artist = self.new(artist_name)
+      
     else
       artist
     end
