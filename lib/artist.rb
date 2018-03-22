@@ -1,6 +1,5 @@
 class Artist
   attr_accessor :name, :songs
-  @@song_count = 0
   @@all = []
 
   def initialize(name)
@@ -44,6 +43,10 @@ class Artist
 
     def self.find_or_create_by_name(name)
       self.find(name) || self.create(name)
+    end
+
+    def print_songs
+      @songs.each{|song| puts song}
     end
 
 end
