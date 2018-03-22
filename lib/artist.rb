@@ -12,7 +12,7 @@ class Artist
     @@all
   end
 
-  def save
+  def self.save
     self.class.all << self
   end
 
@@ -32,10 +32,6 @@ class Artist
   def self.song_count
     @@song_count
   end
-
-
-
-
 
   def self.find_or_create_by_name(artist_name)
     if !self.all.include?(artist_name)
