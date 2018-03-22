@@ -23,8 +23,8 @@ class Artist
     @@song_count
   end
 
-  def save(artist) # String / artirst's name
-    @@all << artist
+  def save
+    @@all << self
   end
 
   def self.all
